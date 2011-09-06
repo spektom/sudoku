@@ -46,6 +46,10 @@
 	Desk.prototype.set = function(row, col, num) {
 		this._getCell(row, col).firstChild.textContent = new String(num);
 	};
+
+	Desk.prototype.clear = function(row, col) {
+		this._getCell(row, col).firstChild.textContent = '';
+	};
 	
 	Desk.prototype.get = function(row, col) {
 		return getNumber(this._getCell(row, col).firstChild.textContent);
@@ -96,6 +100,9 @@
 				if (row < $.SIZE - 1) {
 					self.select(row + 1, col);
 				}
+				break;
+			case 46: // delete
+				self.clear(row, col);
 				break;
 			default:
 				var keyChar = String.fromCharCode(keyCode);
