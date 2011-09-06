@@ -72,7 +72,7 @@
 		}
 		parent.appendChild(this.table);
 		
-		document.onkeyup = function(event) {
+		document.onkeydown = function(event) {
 			var keyCode = window.event ? window.event.keyCode : event.keyCode;
 			var col = self.selected.cellIndex;
 			var row = self.selected.parentNode.rowIndex;
