@@ -1,0 +1,16 @@
+<html>
+	<head>
+		<title>Sudoku Solver</title>
+		<link media="all" type="text/css" href="style.css" rel="stylesheet" />
+		<script type="text/javascript" src="sudoku-core.js"></script>
+		<script type="text/javascript" src="sudoku-ui.js"></script>
+	</head>
+	<body>
+		<div id="sudoku-container"></div><br/>
+		<center><button onclick="var solved=Sudoku.core.solve(desk.toArray()); desk.fill(solved);">Solve</button></center>
+		<script type="text/javascript">
+			var desk = new Sudoku.ui.Desk();
+			desk.draw(document.getElementById("sudoku-container"));
+		</script>
+	</body>
+</html>
