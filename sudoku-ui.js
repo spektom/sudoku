@@ -44,7 +44,10 @@
 	};
 	
 	Desk.prototype.set = function(row, col, num) {
-		this._getCell(row, col).firstChild.textContent = new String(num);
+		num = getNumber(num);
+		if (typeof(num) != 'undefined') {
+			this._getCell(row, col).firstChild.textContent = new String(num);
+		}
 	};
 
 	Desk.prototype.clear = function(row, col) {

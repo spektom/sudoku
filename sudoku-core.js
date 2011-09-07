@@ -80,7 +80,7 @@ var Sudoku = {
 					if (keys.length == 1) {
 						var num = keys.pop();
 						processDependent(matrix, rowKey, colKey, function(r, c) {
-							if (typeof(guesses[r][c]) != 'undefined') {
+							if (typeof(guesses[r]) != 'undefined' && typeof(guesses[r][c]) != 'undefined') {
 								delete guesses[r][c][num];
 							} 
 						});
