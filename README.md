@@ -2,4 +2,4 @@ sudoku
 =======
 Sudoku solver written in JavaScript
 
-See it live here: http://jsfiddle.net/UE3hT/
+See it live here: https://rawgithub.com/spektom/sudoku/master/index.html
